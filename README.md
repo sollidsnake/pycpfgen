@@ -1,5 +1,5 @@
 # Sobre
-pycpfgen é um programa que gera cpfs aleatórios com o intuito de testes.
+pycpfgen é um programa que gera cpfs aleatórios, com o intuito de testes, e os copia direto pra área de transferência.
 
 # Dependências
 Python3 e as seguintes bibliotecas:
