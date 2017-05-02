@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import ipgetter
 from PyQt5.QtWidgets import (QMainWindow,
                              QApplication,
                              QSystemTrayIcon,
@@ -8,7 +9,6 @@ from PyQt5.QtWidgets import (QMainWindow,
                              QShortcut)
 from PyQt5.QtGui import QIcon, QClipboard, QKeySequence
 import cpf
-
 
 def gerar_cpf():
     clip = QApplication.clipboard()
@@ -18,6 +18,10 @@ def gerar_cpf_formatado():
     clip = QApplication.clipboard()
     clip.setText(cpf.gerar_cpf(True))
 
+def buscar_ip():
+    clip = QApplication.clipboard()
+    clip.setText(ipgetter.myip())
+
 if __name__ == '__main__':
     app = QApplication([])
     icon = QSystemTrayIcon(QIcon("img/icon.png"))
@@ -25,6 +29,8 @@ if __name__ == '__main__':
 
     menu.addAction("Gerar cpf sem formatação", gerar_cpf)
     menu.addAction("Gerar cpf com formatação", gerar_cpf_formatado)
+    menu.addSeparator()
+    menu.addAction("Buscar id público", buscar_ip)
     menu.addSeparator()
     menu.addAction("Fechar", app.quit)
     icon.setContextMenu(menu)
