@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pycpfgen"
+version = "0.1.0"
+description = ""
+authors = ["Jesse Medeiros <jessenzr@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+PyQt5 = "^5.15.4"
+pynput = "^1.7.3"
+python-xlib = "^0.30"
+keyboard = "^0.13.5"
+pyqtkeybind = "^0.0.8"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+python-qt-live-coding = "^0.4.3"
+ipdb = "^0.13.8"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
